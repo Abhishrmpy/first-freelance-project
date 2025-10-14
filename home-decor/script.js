@@ -233,3 +233,4 @@ function initializeForm() {
     });
 }
 
+// Remove the old loading screen function completely
