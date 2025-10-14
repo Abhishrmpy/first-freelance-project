@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Decor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <div class="loading-text">Loading Home Decor</div>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">Home Decor</a>
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#designs">Designs</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="mobile-menu" id="mobileMenu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section with Spline Background -->
+    <section class="hero" id="home">
+        <!-- Spline Background -->
+        <div class="spline-background">
+            <iframe 
+                src="https://my.spline.design/orb-tgfu5HPmTzxm9VMxyMk37qh1/"
+                frameborder="0"
+                width="100%"
+                height="100%">
+            </iframe>
+        </div>
+        
+        <!-- Content Overlay -->
+        <div class="hero-overlay">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Hi, I'm Nandani — a creative UI/UX designer shaping digital real estate experiences.</h1>
+                    <p class="hero-subtitle">Transforming spaces into immersive digital experiences through thoughtful design and user-centric approaches.</p>
+                    <a href="#designs" class="btn">View My Designs</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-user"></i>
+                        <p>Designer Portrait</p>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p>With over 7 years of experience in UI/UX design, I specialize in creating digital experiences for real estate and home design platforms. My approach combines aesthetic sensibility with functional design to create spaces that are both beautiful and intuitive.</p>
+                    <p>I believe that good design should not only look appealing but also solve real problems and enhance the user's interaction with digital spaces.</p>
+                    <div class="quote">
+                        "Design is not just what it looks like and feels like. Design is how it works."
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Showcase -->
+    <section class="showcase" id="designs">
+        <div class="container">
+            <h2 class="section-title">Design Showcase</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active">All</button>
+                <button class="filter-btn">Interior</button>
+                <button class="filter-btn">Exterior</button>
+                <button class="filter-btn">Commercial</button>
+                <button class="filter-btn">Residential</button>
+            </div>
+            <div class="design-grid" id="designGrid">
+                <!-- Design cards will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>hello@homedecor.design</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Location</h3>
+                            <p>San Francisco, CA</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-behance"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-dribbble"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#" class="logo">Home Decor</a>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-behance"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-dribbble"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <a href="#home" class="back-to-top">
+                    <i class="fas fa-arrow-up"></i>
+                </a>
+            </div>
+            <div class="copyright">
+                <p>© 2025 Home Decor | Designed by Nandani</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
