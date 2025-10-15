@@ -30,6 +30,23 @@ This is my first freelance web development project. Built in just two days, it d
 
 This portfolio website is a complete solution for showcasing home design projects with a professional aesthetic. The site includes a hero section, about page, interactive design gallery, contact form, and comprehensive footer. Built with vanilla HTML, CSS, and JavaScript for optimal performance and maintainability.
 
+## Screenshots
+
+### Hero Section & Navigation
+The landing page features a striking hero section with a 3D background, bold typography, and easy navigation. The theme toggle button is visible in the top right corner.
+
+![Hero Section](./screenshots/hero-section.png)
+
+### Design Gallery & About Section
+The portfolio showcases 9 beautiful home design projects in an interactive grid layout with filtering options. Each project includes an image, title, and description. The About Me section highlights the designer's experience and philosophy.
+
+![Design Gallery](./screenshots/gallery-section.png)
+
+### Contact Section & Footer
+A comprehensive contact form allows visitors to get in touch, with contact information and social media links. The footer features a multi-column layout with navigation links, company information, and contact details.
+
+![Contact & Footer](./screenshots/contact-footer.png)
+
 ## Features
 
 - **Dark/Light Mode Toggle**: Switch between dark and light themes with persistent storage
