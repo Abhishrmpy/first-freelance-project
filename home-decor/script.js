@@ -1,46 +1,67 @@
-// Sample design data
+// Sample design data with your actual images
 const designs = [
     {
         id: 1,
-        title: "Modern Loft Apartment",
+        title: "Modern Living Room",
         description: "A sleek urban living space with industrial elements and minimalist design.",
         category: "interior",
-        image: "assets/images/loft.jpg"
+        image: "images/image1.jpg"
     },
     {
         id: 2,
-        title: "Coastal Villa",
-        description: "Beachfront property with open spaces and natural materials.",
-        category: "exterior",
-        image: "assets/images/villa.jpg"
+        title: "Contemporary Bedroom",
+        description: "Elegant bedroom design with modern furniture and warm lighting.",
+        category: "interior",
+        image: "images/image2.jpg"
     },
     {
         id: 3,
-        title: "Mountain Retreat",
-        description: "Rustic cabin with modern amenities and panoramic views.",
-        category: "residential",
-        image: "assets/images/retreat.jpg"
+        title: "Minimalist Kitchen",
+        description: "Clean and functional kitchen design with premium appliances.",
+        category: "interior",
+        image: "images/image3.jpg"
     },
     {
         id: 4,
-        title: "Urban Penthouse",
-        description: "Luxury high-rise apartment with premium finishes and city views.",
+        title: "Luxury Bathroom",
+        description: "Spa-like bathroom with premium fixtures and natural materials.",
         category: "interior",
-        image: "assets/images/penthouse.jpg"
+        image: "images/image4.jpg"
     },
     {
         id: 5,
-        title: "Minimalist House",
-        description: "Clean lines, open spaces, and functional design principles.",
-        category: "residential",
-        image: "assets/images/minimalist.jpg"
+        title: "Modern Exterior",
+        description: "Contemporary home exterior with clean lines and natural landscaping.",
+        category: "exterior",
+        image: "images/image5.jpg"
     },
     {
         id: 6,
-        title: "Family Residence",
-        description: "Spacious home designed for modern family living and entertaining.",
+        title: "Garden Oasis",
+        description: "Beautiful outdoor space with landscaping and comfortable seating.",
+        category: "exterior",
+        image: "images/image6.jpg"
+    },
+    {
+        id: 7,
+        title: "Commercial Space",
+        description: "Modern office design with collaborative spaces and natural light.",
+        category: "commercial",
+        image: "images/image7.jpg"
+    },
+    {
+        id: 8,
+        title: "Residential Complex",
+        description: "Luxury residential building with modern amenities.",
         category: "residential",
-        image: "assets/images/family.jpg"
+        image: "images/image8.jpg"
+    },
+    {
+        id: 9,
+        title: "Architectural Design",
+        description: "Innovative architectural concept with sustainable materials.",
+        category: "residential",
+        image: "images/image9.jpg"
     }
 ];
 
@@ -52,15 +73,21 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeScrollEffects();
     initializeForm();
     
-    // Hide loading screen immediately
-    const loadingScreen = document.getElementById('loadingScreen');
-    loadingScreen.style.opacity = '0';
-    loadingScreen.style.visibility = 'hidden';
+    // Hide loading screen after a short delay to ensure everything is loaded
+    setTimeout(() => {
+        const loadingScreen = document.getElementById('loadingScreen');
+        if (loadingScreen) {
+            loadingScreen.style.opacity = '0';
+            loadingScreen.style.visibility = 'hidden';
+        }
+    }, 500);
 });
 
 // Theme Toggle
 function initializeTheme() {
     const themeToggle = document.getElementById('themeToggle');
+    if (!themeToggle) return;
+    
     const themeIcon = themeToggle.querySelector('i');
     
     themeToggle.addEventListener('click', () => {
@@ -90,6 +117,8 @@ function initializeTheme() {
 function initializeNavigation() {
     const mobileMenu = document.getElementById('mobileMenu');
     const navMenu = document.getElementById('navMenu');
+    
+    if (!mobileMenu || !navMenu) return;
     
     mobileMenu.addEventListener('click', () => {
         navMenu.classList.toggle('show');
@@ -133,6 +162,8 @@ function initializeDesignGrid() {
     const designGrid = document.getElementById('designGrid');
     const filterButtons = document.querySelectorAll('.filter-btn');
     
+    if (!designGrid) return;
+    
     // Populate design grid
     renderDesigns(designs);
     
@@ -162,32 +193,20 @@ function initializeDesignGrid() {
 
 function renderDesigns(designsArray) {
     const designGrid = document.getElementById('designGrid');
+    if (!designGrid) return;
+    
     designGrid.innerHTML = '';
     
     designsArray.forEach(design => {
         const designCard = document.createElement('div');
         designCard.className = 'design-card';
         designCard.innerHTML = `
-            <div class="card-image">
-                <div class="spline-placeholder">
-                    <i class="fas fa-cube"></i>
-                    <p>3D Preview</p>
-                </div>
-            </div>
+            <img src="${design.image}" alt="${design.title}" loading="lazy">
             <div class="card-content">
                 <h3 class="card-title">${design.title}</h3>
                 <p class="card-description">${design.description}</p>
             </div>
         `;
-        
-        // Add hover effect
-        designCard.addEventListener('mouseenter', () => {
-            designCard.style.transform = 'translateY(-10px)';
-        });
-        
-        designCard.addEventListener('mouseleave', () => {
-            designCard.style.transform = 'translateY(0)';
-        });
         
         designGrid.appendChild(designCard);
     });
@@ -197,26 +216,32 @@ function renderDesigns(designsArray) {
 function initializeScrollEffects() {
     // Scroll progress bar
     window.addEventListener('scroll', () => {
+        const scrollProgress = document.getElementById('scrollProgress');
+        if (!scrollProgress) return;
+        
         const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
         const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         const scrolled = (winScroll / height) * 100;
-        document.getElementById('scrollProgress').style.width = scrolled + '%';
+        scrollProgress.style.width = scrolled + '%';
     });
     
     // Back to top button
     const backToTop = document.querySelector('.back-to-top');
-    backToTop.addEventListener('click', (e) => {
-        e.preventDefault();
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
+    if (backToTop) {
+        backToTop.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
-    });
+    }
 }
 
 // Contact Form
 function initializeForm() {
     const contactForm = document.getElementById('contactForm');
+    if (!contactForm) return;
     
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
@@ -232,5 +257,3 @@ function initializeForm() {
         this.reset();
     });
 }
-
-// Remove the old loading screen function completely
