@@ -35,17 +35,17 @@ This portfolio website is a complete solution for showcasing home design project
 ### Hero Section & Navigation
 The landing page features a striking hero section with a 3D background, bold typography, and easy navigation. The theme toggle button is visible in the top right corner.
 
-![Hero Section](https://raw.githubusercontent.com/Abhishrmpy/nandani-portfolio/main/home-decor/UI/hero-section.jpg)
+![Hero Section](https://raw.githubusercontent.com/Abhishrmpy/first-freelance-project/main/home-decor/UI/hero-section.jpg)
 
 ### Design Gallery & About Section
 The portfolio showcases 9 beautiful home design projects in an interactive grid layout with filtering options. Each project includes an image, title, and description. The About Me section highlights the designer's experience and philosophy.
 
-![Design Gallery](https://raw.githubusercontent.com/Abhishrmpy/nandani-portfolio/main/home-decor/UI/gallery-section.jpg)
+![Design Gallery](https://raw.githubusercontent.com/Abhishrmpy/first-freelance-project/main/home-decor/UI/gallery-section.jpg)
 
 ### Contact Section & Footer
 A comprehensive contact form allows visitors to get in touch, with contact information and social media links. The footer features a multi-column layout with navigation links, company information, and contact details.
 
-![Contact & Footer](https://raw.githubusercontent.com/Abhishrmpy/nandani-portfolio/main/home-decor/UI/contact-footer.jpg)
+![Contact & Footer](https://raw.githubusercontent.com/Abhishrmpy/first-freelance-project/main/home-decor/UI/contact-footer.jpg)
 
 ## Features
 
